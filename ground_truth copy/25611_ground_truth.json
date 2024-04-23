@@ -1,0 +1,41 @@
+{
+    "response": {
+        "list_latent_topics": {
+            "A aprovação da reforma tributária": "Aprovação da reforma tributária na Câmara dos Deputados, redução da taxação sobre itens básicos e começar a taxar itens de luxo.",
+            "Estatuto da Pessoa com Deficiência": "Definição de quem são as pessoas com deficiência e quais os seus direitos, sobretudo acessibilidade",
+            "Homenagem aos refugiados e migrantes que estão no Brasil": "Homenagem aos refugiados e migrantes que estão no Brasil e abrigo aos  128 imigrantes afegãos - em função do  Dia Mundial do Refugiado, 20 de junho, data escolhida pela ONU"
+        },
+        "stances": {
+            "A aprovação da reforma tributária": {
+                "O SR. PAULO PAIM": "FOR"
+            },
+            "Estatuto da Pessoa com Deficiência": {
+                "O SR. PAULO PAIM": "FOR"
+            },
+            "Homenagem aos refugiados e migrantes que estão no Brasil": {
+                "O SR. PAULO PAIM": "FOR"
+            }
+        }
+    }
+    ,
+    "model_response_evaluation": {
+        "mapping":{
+            "A aprovação da reforma tributária":["Reforma Tribut\u00e1ria"],
+            "Estatuto da Pessoa com Deficiência":["Estatuto da Pessoa com Defici\u00eancia"],
+            "Homenagem aos refugiados e migrantes que estão no Brasil":["Dia Mundial do Refugiado"]
+
+
+        },
+        "list_latent_topics": {
+            "verdadeiro_positivo": [
+                "A aprovação da reforma tributária",
+                "Estatuto da Pessoa com Deficiência",
+                "Homenagem aos refugiados e migrantes que estão no Brasil"
+            ],
+            "falso_positivo": [],
+            "verdadeiro_negativo": [],
+            "falso_negativo": []
+
+        }
+    }
+}

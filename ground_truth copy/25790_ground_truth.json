@@ -1,0 +1,131 @@
+{
+    "id_session": 25790,
+    "response": {
+        "list_latent_topics": {
+            "Projeto de Lei Complementar nº 205, de 2023": "Prorrogação do prazo para execução dos recursos da Lei Paulo Gustavo",
+            "Projeto de Lei nº 2.788, de 2019": "Política Nacional de Direitos das Populações Atingidas por Barragens",
+            "Substitutivo da Câmara dos Deputados ao Projeto de Lei nº 4.727, de 2020": "Altera o art. 265 do Código de Processo Penal para extinguir a multa por abandono do processo aplicada sumariamente pelo juiz em desfavor do advogado",
+            "Projeto de Lei nº 5.086, de 2023": "Prorrogar os prazos para a elaboração do Plano de Mobilidade Urbana - que proporcionará aos municípios mais tempo para planejar e implementar estratégias de mobilidade mais eficazes e adequadas às suas necessidades",
+            "Projeto de Lei nº 1.269, de 2022": "à Lei de Improbidade Administrativa, e dá outras providências, especificamente para disciplinar os efeitos jurídicos decorrentes das declarações de indisponibilidade de bens",
+            "Combate ao diabetes":"além de celebrar o dia mundial, em 14 de novembro, é preciso criar condições para que, em todos os dias, seja possível esclarecer sobre como evitá-la e prestar a devida assistência aos diabéticos",
+            "Luciane Barbosa Farias presente no Ministério da Justiça e no Ministério dos Direitos Humanos":"Luciane Barbosa Farias circulando com muita desenvoltura dentro do Ministério da Justiça, do Ministério dos Direitos Humanos",
+            "Esforço que foi feito pelo Governo para tirar todos os brasileiros que estavam em área do conflito":"Esforço que foi feito pelo Governo para tirar todos os brasileiros que estavam em área do conflito envolvendo área de Gaza, palestinos e israelitas",
+            "Combate ao analfabetismo no Brasil":"Combate ao analfabetismo no Brasil ",
+            "Reforma tributária":"Reforma tributária",
+            "Cotas de tela para o cinema e para as TVs por assinatura":"As cotas de tela estabelecem a compulsoriedade a empresas exibidoras, sejam de cinema ou de TV por assinatura, para que incluam, em sua programação, obras cinematográficas nacionais.",
+            "Declaração do eminente Presidente":"Declaração do eminente Presidente de que os ataques que estão sendo perpetrados por Israel contra a Faixa de Gaza guardam a mesma relevância",
+            "Conflito envolvendo o grupo Hamas": "especificamente abordando as ações do grupo",
+            "Reajustes salariais e auxílio-moradia no Distrito Federal":"Situação da segurança pública no Distrito Federal, com foco específico nas questões de remuneração e condições de trabalho dos policiais, incluindo polícia civil, militar, e bombeiros.",
+            "Educação profissional":"questão da educação profissional com mais atenção, especialmente o aspecto digitalização da educação",
+            "Proteção dos direitos das famílias afetadas pela desintrusão da Terra Indígena Apyterewa":"Proteção dos direitos das famílias afetadas pela desintrusão da Terra Indígena Apyterewa",
+            "Aprovação de dois importantes empréstimos para o Estado do Piauí":"aprovação de dois importantes empréstimos para o Estado do Piauí"
+        },
+        "stances": {
+            "Projeto de Lei Complementar nº 205, de 2023": {
+                "O SR. FLÁVIO ARNS": "FOR",
+                "O SR. JAQUES WAGNER": "FOR",
+                "O SR. ESPERIDIÃO  AMIN": "FOR",
+                "O SR. ROGERIO MARINHO": "FOR",
+                "A SRA. ZENAIDE MAIA": "FOR",
+                "O SR. PAULO PAIM": "FOR",
+                "O SR. HUMBERTO COSTA": "NEUTRAL"
+            },
+            "Projeto de Lei nº 2.788, de 2019": {
+                "A SRA. DAMARES ALVES": "FOR",
+                "O SR. JORGE KAJURU": "FOR",
+                "A SRA. ZENAIDE MAIA": "FOR"
+
+            },
+            "Substitutivo da Câmara dos Deputados ao Projeto de Lei nº 4.727, de 2020": {
+                "O SR. PRESIDENTE RODRIGO PACHECO": "FOR",
+                "A SRA. SORAYA THRONICKE": "FOR"
+            },
+            "Projeto de Lei nº 5.086, de 2023": {
+                "O SR. JAQUES WAGNER": "FOR"
+            },
+            "Projeto de Lei nº 1.269, de 2022": {
+                "O SR. PRESIDENTE RODRIGO PACHECO": "NEUTRAL"
+            },
+            "Combate ao diabetes ": {
+                "O SR. JORGE KAJURU": "FOR",
+                "O SR. PRESIDENTE CHICO RODRIGUES": "FOR",
+                "O SR. EDUARDO GIRÃO": "FOR"
+            },
+            "Luciane Barbosa Farias presente no Ministério da Justiça e no Ministério dos Direitos Humanos": {
+                "O SR. EDUARDO GIRÃO": "AGAINST",
+                "O SR. PRESIDENTE RODRIGO PACHECO": "NEUTRAL"
+            },
+            "Esforço que foi feito pelo Governo para tirar todos os brasileiros que estavam em área do conflito": {
+                "O SR. PAULO PAIM": "FOR",
+                "O SR. PRESIDENTE CHICO RODRIGUES": "FOR"
+            },
+            "Combate ao analfabetismo no Brasil ": {
+                "O SR. CONFÚCIO MOURA": "FOR"
+            },
+            "Reforma tributária": {
+                "O SR. PRESIDENTE CHICO RODRIGUES": "FOR",
+                "O SR. IZALCI LUCAS": "AGAINST"
+            },
+            "Cotas de tela para o cinema": {
+                "O SR. HUMBERTO COSTA":"FOR"
+            },
+            "Declaração do eminente Presidente": {
+                "O SR. ROGERIO MARINHO":"AGAINST",
+                "O SR. PRESIDENTE CHICO RODRIGUES": "NEUTRAL"
+            },
+            "Conflito envolvendo o grupo Hamas": {
+                "O SR. PRESIDENTE CHICO RODRIGUES": "AGAINST"
+            },
+            "Reajustes salariais e auxílio-moradia no Distrito Federal": {
+                "O SR. IZALCI LUCAS": "FOR"
+            },
+            "Educação profissional": {
+                "O SR. IZALCI LUCAS": "FOR"
+            },
+            "Proteção dos direitos das famílias afetadas pela desintrusão da Terra Indígena Apyterewa": {
+                "O SR. ZEQUINHA MARINHO": "FOR"
+            },
+            "Aprovação de dois importantes empréstimos para o Estado do Piauí": {
+                "O SR. MARCELO CASTRO": "FOR"
+            }
+
+        }
+        
+    },
+    "model_response_evaluation": {
+        "mapping":{
+            "Projeto de Lei Complementar nº 205, de 2023":["Projeto de Lei Complementar n\u00ba 205, de 2023"],
+            "Projeto de Lei nº 2.788, de 2019":["Projeto de Lei n\u00ba 2.788, de 2019"],
+            "Substitutivo da Câmara dos Deputados ao Projeto de Lei nº 4.727, de 2020":["Substitutivo da C\u00e2mara ao Projeto de Lei n\u00ba 4.727, de 2020"],
+            "Projeto de Lei nº 5.086, de 2023":["Projeto de Lei n\u00ba 5.086, de 2023"],
+            "Projeto de Lei nº 1.269, de 2022":["Projeto de Lei n\u00ba 1.269, de 2022"]
+
+        },
+        "list_latent_topics": {
+            "verdadeiro_positivo": [
+                "Projeto de Lei Complementar nº 205, de 2023",
+                "Projeto de Lei nº 2.788, de 2019",
+                "Substitutivo da Câmara dos Deputados ao Projeto de Lei nº 4.727, de 2020",
+                "Projeto de Lei nº 5.086, de 2023",
+                "Projeto de Lei nº 1.269, de 2022"
+            ],
+            "falso_positivo": [],
+            "verdadeiro_negativo": [],
+            "falso_negativo": [
+                "Combate ao diabetes",
+                "Luciane Barbosa Farias presente no Ministério da Justiça e no Ministério dos Direitos Humanos",
+                "Esforço que foi feito pelo Governo para tirar todos os brasileiros que estavam em área do conflito",
+                "Combate ao analfabetismo no Brasil",
+                "Reforma tributária",
+                "Cotas de tela para o cinema e para as TVs por assinatura",
+                "Declaração do eminente Presidente",
+                "Conflito envolvendo o grupo Hamas",
+                "Reajustes salariais e auxílio-moradia no Distrito Federal",
+                "Educação profissional",
+                "Proteção dos direitos das famílias afetadas pela desintrusão da Terra Indígena Apyterewa",
+                "Aprovação de dois importantes empréstimos para o Estado do Piauí"
+            ]
+
+        }
+    }
+}
