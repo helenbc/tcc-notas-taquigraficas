@@ -1,0 +1,3 @@
+id,size,precision,recall,f1,accuracy
+25611,small,1.0,1.0,1.0,1.0
+25636,small,1.0,0.5,0.6666666666666666,0.5

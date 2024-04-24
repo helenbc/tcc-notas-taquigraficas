@@ -40,4 +40,28 @@
             "falso_negativo": []
         }
     }
+    ,
+    "model_response_evaluation_without_compression": {
+        "mapping": {
+            "A aprovação da reforma tributária": [
+                "Reforma Tributária"
+            ],
+            "Estatuto da Pessoa com Deficiência": [
+                "Estatuto da Pessoa com Deficiência"
+            ],
+            "Homenagem aos refugiados e migrantes que estão no Brasil": [
+                "Dia Mundial do Refugiado"
+            ]
+        },
+        "list_latent_topics": {
+            "verdadeiro_positivo": [
+                "A aprovação da reforma tributária",
+                "Estatuto da Pessoa com Deficiência",
+                "Homenagem aos refugiados e migrantes que estão no Brasil"
+            ],
+            "falso_positivo": [],
+            "verdadeiro_negativo": [],
+            "falso_negativo": []
+        }
+    }
 }

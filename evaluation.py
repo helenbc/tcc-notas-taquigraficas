@@ -42,8 +42,8 @@ def read_json_file_to_dict(path):
         dict = json.loads(content)
     return dict
 
-def get_keys_from_dict(dict):
-    model_response_evaluation = dict['model_response_evaluation']['list_latent_topics']
+def get_model_response_evaluation(dict,key):
+    model_response_evaluation = dict[key]['list_latent_topics']
     return model_response_evaluation
 
 def calculate_pressicion(tp,fp):
@@ -76,21 +76,6 @@ small_sessions = read_json_file_to_array("./sizes/small_sessions.json")
 medium_sessions = read_json_file_to_array("./sizes/medium_sessions.json")
 large_sessions = read_json_file_to_array("./sizes/big_sessions.json")
 
-#ground_truth = read_json_file_to_dict("./ground_truth/25518_ground_truth.json")
-#dict = get_keys_from_dict(ground_truth)
-#print(dict)
-#tp, tn, fp, fn = read_tp_tn_fp_fn(dict)
-#metrics = calculate_metrics(tp,tn,fp,fn)
-#print(metrics)
-
-for session in small:
-    session_dict = read_json_file_to_dict(f"./ground_truth/{session}_ground_truth.json")
-    dict = get_keys_from_dict(session_dict)
-    tp, tn, fp, fn = read_tp_tn_fp_fn(dict)
-    metrics = calculate_metrics(tp,tn,fp,fn)
-    print(metrics)
-
-
 def csv_id_size_precision_recall_f1_accuracy():
     with open('metrics_by_session.csv', 'w', newline='') as csvfile:
         fieldnames = ['id', 'size', 'precision', 'recall', 'f1', 'accuracy']
@@ -99,44 +84,44 @@ def csv_id_size_precision_recall_f1_accuracy():
         writer.writeheader()
         for session in small:
             session_dict = read_json_file_to_dict(f"./ground_truth/{session}_ground_truth.json")
-            dict = get_keys_from_dict(session_dict)
+            dict = get_model_response_evaluation(session_dict, key='model_response_evaluation')
             tp, tn, fp, fn = read_tp_tn_fp_fn(dict)
             metrics = calculate_metrics(tp,tn,fp,fn)
             writer.writerow({'id': session, 'size': 'small', 'precision': metrics[0], 'recall': metrics[1], 'f1': metrics[2], 'accuracy': metrics[3]})
 
         for session in medium:
             session_dict = read_json_file_to_dict(f"./ground_truth/{session}_ground_truth.json")
-            dict = get_keys_from_dict(session_dict)
+            dict = get_model_response_evaluation(session_dict, key='model_response_evaluation')
             tp, tn, fp, fn = read_tp_tn_fp_fn(dict)
             metrics = calculate_metrics(tp,tn,fp,fn)
             writer.writerow({'id': session, 'size': 'medium', 'precision': metrics[0], 'recall': metrics[1], 'f1': metrics[2], 'accuracy': metrics[3]})
 
         for session in big:
             session_dict = read_json_file_to_dict(f"./ground_truth/{session}_ground_truth.json")
-            dict = get_keys_from_dict(session_dict)
+            dict = get_model_response_evaluation(session_dict, key='model_response_evaluation')
             tp, tn, fp, fn = read_tp_tn_fp_fn(dict)
             metrics = calculate_metrics(tp,tn,fp,fn)
             writer.writerow({'id': session, 'size': 'big', 'precision': metrics[0], 'recall': metrics[1], 'f1': metrics[2], 'accuracy': metrics[3]})
 
-def calculate_metrics_from_csv():
-    with open('metrics_by_session.csv', newline='') as csvfile:
-        reader = csv.DictReader(csvfile)
-        #calculate average of each metric
-        total_quantity = len(small) + len(medium) + len(big)
-        precision = 0
-        recall = 0
-        f1 = 0
-        accuracy = 0
-        for row in reader:
-            precision += float(row['precision'])
-            recall += float(row['recall'])
-            f1 += float(row['f1'])
-            accuracy += float(row['accuracy'])
-        precision = precision / total_quantity
-        recall = recall / total_quantity
-        f1 = f1 / total_quantity
-        accuracy = accuracy / total_quantity
-    return precision, recall, f1, accuracy
+# def calculate_metrics_from_csv():
+#     with open('metrics_by_session.csv', newline='') as csvfile:
+#         reader = csv.DictReader(csvfile)
+#         #calculate average of each metric
+#         total_quantity = len(small) + len(medium) + len(big)
+#         precision = 0
+#         recall = 0
+#         f1 = 0
+#         accuracy = 0
+#         for row in reader:
+#             precision += float(row['precision'])
+#             recall += float(row['recall'])
+#             f1 += float(row['f1'])
+#             accuracy += float(row['accuracy'])
+#         precision = precision / total_quantity
+#         recall = recall / total_quantity
+#         f1 = f1 / total_quantity
+#         accuracy = accuracy / total_quantity
+#     return precision, recall, f1, accuracy
 
 
 import csv
@@ -183,22 +168,23 @@ def calculate_averages(filename):
 
     return averages
 
-# Exemplo de uso
-filename = 'metrics_by_session.csv'
-averages = calculate_averages(filename)
-for size, avg in averages.items():
-    if size == 'general':
-        print("General averages across all sessions:")
-    else:
-        print(f"{size.capitalize()} sessions:")
-    for metric, value in avg.items():
-        print(f"  Average {metric}: {value:.4f}")
+def calculate_metrics_model_response_evaluation_without_compression():
+    with open('metrics_small_sessions_without_compression.csv', 'w', newline='') as csvfile:
+        fieldnames = ['id', 'size', 'precision', 'recall', 'f1', 'accuracy']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+        writer.writeheader()
+        for session in small:
+            session_dict = read_json_file_to_dict(f"./ground_truth/{session}_ground_truth.json")
+            dict = get_model_response_evaluation(session_dict, key='model_response_evaluation_without_compression')
+            tp, tn, fp, fn = read_tp_tn_fp_fn(dict)
+            metrics = calculate_metrics(tp,tn,fp,fn)
+            writer.writerow({'id': session, 'size': 'small', 'precision': metrics[0], 'recall': metrics[1], 'f1': metrics[2], 'accuracy': metrics[3]})
 
 
 csv_id_size_precision_recall_f1_accuracy()  
-print(calculate_metrics_from_csv()) 
+calculate_metrics_model_response_evaluation_without_compression()
 
-# Exemplo de uso
 filename = 'metrics_by_session.csv'
 averages = calculate_averages(filename)
 for size, avg in averages.items():
@@ -206,7 +192,10 @@ for size, avg in averages.items():
     for metric, value in avg.items():
         print(f"  Average {metric}: {value:.4f}")    
 
-
-
-#def count_confussion_matrix(a):
+filename = 'metrics_small_sessions_without_compression.csv'
+averages = calculate_averages(filename)
+for size, avg in averages.items():
+    print(f"{size.capitalize()} sessions without compression:")
+    for metric, value in avg.items():
+        print(f"  Average {metric}: {value:.4f}")
     
