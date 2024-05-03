@@ -49,7 +49,7 @@
     "model_response_evaluation_without_compression": {
         "mapping": {
             "Marcha das Margaridas 2023": [
-                "Marcha das Margaridas 2023"
+                "Marcha das Margaridas"
             ],
             "PEC n° 07 para ser votada no Senado Federal, proposta de emenda à Constituição": [
                 "Enquadramento dos servidores do ex-território como servidores da União"
@@ -57,7 +57,7 @@
         },
         "list_latent_topics": {
             "verdadeiro_positivo": [
-                "Marcha das Margaridas 2023",
+                "Marcha das Margaridas",
                 "PEC n° 07 para ser votada no Senado Federal, proposta de emenda à Constituição"
             ],
             "falso_positivo": [],
