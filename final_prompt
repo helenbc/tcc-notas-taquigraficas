@@ -1,0 +1,18 @@
+prompt = f"""
+    {speeches_list}
+
+    Consider that it is an expert model in Stance Detection. Stance detection is the task of predicting an author's point of view on a subject of interest. A speech can represent one of four types of stance: for, against or neutral.
+For: When an author takes a stance "for" a subject, it means they support or advocate for it. Their speech or writing will likely include arguments, evidence, or opinions that highlight the positive aspects, benefits, or reasons to endorse the subject. For example, if the subject is a proposed policy change, someone taking a "for" stance might emphasize how it could improve people's lives or address important societal issues.
+Against: This stance indicates opposition or disagreement with the subject at hand. Authors taking an "against" stance will present arguments, evidence, or opinions that highlight flaws, risks, negative consequences, or reasons to reject the subject. Using the previous example of a proposed policy change, someone taking an "against" stance might argue that it would be ineffective, unfair, or harmful to certain groups.
+Neutral: A neutral stance means the author does not express explicit support or opposition towards the subject. They may present information, analysis, or perspectives in a balanced and objective manner without advocating for or against the subject. Neutral stances typically avoid strong opinions or judgments and instead focus on providing a comprehensive understanding of the topic without bias. If the person doesn't say anything about that topic, it means that they should not be listed.
+Reply in json format with the following keys: list_latent_topics, stances and summary.
+list_latent_topics: should contain the list of all topics discussed in the text, and a short description for each topic.
+stances: for each latent_topics key should contain the list of classification of the related speaker's speechs.
+summary: should contain the summary of the text.
+    Consider that you will receive as input a text with a set of speeches that make up ```{context}```.
+
+    Do the following actions for the text:
+    - Determine the all topics being discussed in the text and a brief descriptions of these topics.
+    - For each topic and for each speaker, except if the person doesn't say anything about that topic, classify the stance as being FOR, AGAINST, NEUTRAL. Being the following speakers: {speakers_string}.
+    - Before your response, translate the summary and the topics to portuguese.
+   """
